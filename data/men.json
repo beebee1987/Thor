@@ -1,0 +1,67 @@
+{
+     "items": [
+           {   
+               "id": 1,
+               "title": "Cards", 
+               "mainImage": "img/Men/Card.jpg", 
+               "sideImage1": "img/wireframe.png",
+               "sideImage2": "img/canvas.png"
+           },
+           {   
+               "id": 2,
+               "title": "Cigarrate", 
+               "mainImage": "img/Men/Cigarrate.jpg", 
+               "sideImage1": "img/wireframe.png",
+               "sideImage2": "img/canvas.png"
+           },
+           {   
+               "id": 3,
+               "title": "Dice", 
+               "mainImage": "img/Men/Dice.jpg", 
+               "sideImage1": "img/wireframe.png",
+               "sideImage2": "img/canvas.png"
+           },
+           {   
+               "id": 4,
+               "title": "Shoe1", 
+               "mainImage": "img/Men/Shoe1.jpg", 
+               "sideImage1": "img/wireframe.png",
+               "sideImage2": "img/canvas.png"
+           },
+           {   
+               "id": 5,
+               "title": "Shoe2", 
+               "mainImage": "img/Men/Shoe2.jpg", 
+               "sideImage1": "img/wireframe.png",
+               "sideImage2": "img/canvas.png"
+           },
+           {   
+               "id": 6,
+               "title": "Snacks", 
+               "mainImage": "img/Men/Snacks.jpg", 
+               "sideImage1": "img/wireframe.png",
+               "sideImage2": "img/canvas.png"
+           },
+           {   
+               "id": 7,
+               "title": "Sock1", 
+               "mainImage": "img/Men/Sock1.jpg", 
+               "sideImage1": "img/wireframe.png",
+               "sideImage2": "img/canvas.png"
+           },
+           {   
+               "id": 8,
+               "title": "Sock2", 
+               "mainImage": "img/Men/Sock2.jpg", 
+               "sideImage1": "img/wireframe.png",
+               "sideImage2": "img/canvas.png"
+           },
+           {   
+               "id": 9,
+               "title": "Tiger", 
+               "mainImage": "img/Men/Tiger.jpg", 
+               "sideImage1": "img/wireframe.png",
+               "sideImage2": "img/canvas.png"
+           }
+      ]
+}

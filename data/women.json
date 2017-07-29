@@ -1,0 +1,46 @@
+{
+     "items": [
+           {   
+               "id": 10,
+               "title": "Chips", 
+               "mainImage": "img/WoWomen/chips.jpg", 
+               "sideImage1": "img/wireframe.png",
+               "sideImage2": "img/canvas.png"
+           },
+           {   
+               "id": 11,
+               "title": "Cigarrate", 
+               "mainImage": "img/Women/lifesavers.jpeg", 
+               "sideImage1": "img/wireframe.png",
+               "sideImage2": "img/canvas.png"
+           },
+           {   
+               "id": 12,
+               "title": "Drinks", 
+               "mainImage": "img/Women/drinks.jpg", 
+               "sideImage1": "img/wireframe.png",
+               "sideImage2": "img/canvas.png"
+           },
+           {   
+               "id": 13,
+               "title": "Shoe", 
+               "mainImage": "img/Women/Shoe1.jpg", 
+               "sideImage1": "img/wireframe.png",
+               "sideImage2": "img/canvas.png"
+           },
+           {   
+               "id": 14,
+               "title": "Sock", 
+               "mainImage": "img/Women/Sock1.jpg", 
+               "sideImage1": "img/wireframe.png",
+               "sideImage2": "img/canvas.png"
+           },
+           {   
+               "id": 15,
+               "title": "Yogurt", 
+               "mainImage": "img/Women/yogurt.jpg", 
+               "sideImage1": "img/wireframe.png",
+               "sideImage2": "img/canvas.png"
+           }          
+      ]
+}

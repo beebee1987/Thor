@@ -1,0 +1,96 @@
+{
+     "items": [
+          {   
+               "id": 10,
+               "title": "Chips", 
+               "mainImage": "img/WoWomen/chips.jpg", 
+               "sideImage1": "img/wireframe.png",
+               "sideImage2": "img/canvas.png"
+           },
+           {   
+               "id": 11,
+               "title": "Cigarrate", 
+               "mainImage": "img/Women/lifesavers.jpeg", 
+               "sideImage1": "img/wireframe.png",
+               "sideImage2": "img/canvas.png"
+           },
+           {   
+               "id": 12,
+               "title": "Drinks", 
+               "mainImage": "img/Women/drinks.jpg", 
+               "sideImage1": "img/wireframe.png",
+               "sideImage2": "img/canvas.png"
+           },
+           {   
+               "id": 13,
+               "title": "Shoe", 
+               "mainImage": "img/Women/Shoe1.jpg", 
+               "sideImage1": "img/wireframe.png",
+               "sideImage2": "img/canvas.png"
+           },
+           {   
+               "id": 14,
+               "title": "Sock", 
+               "mainImage": "img/Women/Sock1.jpg", 
+               "sideImage1": "img/wireframe.png",
+               "sideImage2": "img/canvas.png"
+           },
+           {   
+               "id": 1,
+               "title": "Cards", 
+               "mainImage": "img/Men/Card.png", 
+               "sideImage1": "img/wireframe.png",
+               "sideImage2": "img/canvas.png"
+           },          
+           {   
+               "id": 4,
+               "title": "Shoe1", 
+               "mainImage": "img/Men/Shoe1.png", 
+               "sideImage1": "img/wireframe.png",
+               "sideImage2": "img/canvas.png"
+           },
+           {   
+               "id": 5,
+               "title": "Shoe2", 
+               "mainImage": "img/Men/Shoe2.png", 
+               "sideImage1": "img/wireframe.png",
+               "sideImage2": "img/canvas.png"
+           },
+           {   
+               "id": 6,
+               "title": "Snacks", 
+               "mainImage": "img/Men/Snacks.png", 
+               "sideImage1": "img/wireframe.png",
+               "sideImage2": "img/canvas.png"
+           },
+            {   
+               "id": 16,
+               "title": "Bicycle", 
+               "mainImage": "img/Kids/Bicycle.jpg", 
+               "sideImage1": "img/wireframe.png",
+               "sideImage2": "img/canvas.png"
+           },
+           {   
+               "id": 17,
+               "title": "Candy1", 
+               "mainImage": "img/Kids/Candy.jpg", 
+               "sideImage1": "img/wireframe.png",
+               "sideImage2": "img/canvas.png"
+           },
+           {   
+               "id": 18,
+               "title": "Candy2", 
+               "mainImage": "img/Kids/Candy2.jpeg", 
+               "sideImage1": "img/wireframe.png",
+               "sideImage2": "img/canvas.png"
+           },
+           {   
+               "id": 19,
+               "title": "Candy3", 
+               "mainImage": "img/Kids/Candy3.jpg", 
+               "sideImage1": "img/wireframe.png",
+               "sideImage2": "img/canvas.png"
+           }
+          
+      ]
+}

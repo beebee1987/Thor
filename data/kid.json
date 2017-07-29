@@ -1,0 +1,39 @@
+{
+     "items": [
+           {   
+               "id": 16,
+               "title": "Bicycle", 
+               "mainImage": "img/Kids/Bicycle.jpg", 
+               "sideImage1": "img/wireframe.png",
+               "sideImage2": "img/canvas.png"
+           },
+           {   
+               "id": 17,
+               "title": "Candy1", 
+               "mainImage": "img/Kids/Candy.jpg", 
+               "sideImage1": "img/wireframe.png",
+               "sideImage2": "img/canvas.png"
+           },
+           {   
+               "id": 18,
+               "title": "Candy2", 
+               "mainImage": "img/Kids/Candy2.jpeg", 
+               "sideImage1": "img/wireframe.png",
+               "sideImage2": "img/canvas.png"
+           },
+           {   
+               "id": 19,
+               "title": "Candy3", 
+               "mainImage": "img/Kids/Candy3.jpg", 
+               "sideImage1": "img/wireframe.png",
+               "sideImage2": "img/canvas.png"
+           },
+           {   
+               "id": 20,
+               "title": "Chocolate", 
+               "mainImage": "img/Kids/Chocolate.jpg", 
+               "sideImage1": "img/wireframe.png",
+               "sideImage2": "img/canvas.png"
+           }           
+      ]
+}

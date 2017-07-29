@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>js/views/payments.html</url>
+            <bookmark id="1">
+                <name/>
+                <line>87</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/Users/user/MyWork/iSolutionProjects/Imprimis/js/main.js</file>
+            <file>file:/Users/user/MyWork/iSolutionProjects/Imprimis/js/utils.js</file>
+            <file>file:/Users/user/MyWork/iSolutionProjects/Imprimis/js/viewModels/header.js</file>
+            <file>file:/Users/user/MyWork/iSolutionProjects/Imprimis/js/viewModels/login.js</file>
+            <file>file:/Users/user/MyWork/iSolutionProjects/Imprimis/js/factory/CustomerFactory.js</file>
+            <file>file:/Users/user/MyWork/iSolutionProjects/Imprimis/js/views/header.html</file>
+        </group>
+    </open-files>
+</project-private>
