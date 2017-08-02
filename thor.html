@@ -89,23 +89,7 @@
     	<script src="js/index.js"></script>
 		<script>                    
 		(function() {
-                               // from: https://bugs.chromium.org/p/chromium/issues/detail?id=698163&desc=5#c10
-                                RTCPeerConnection.prototype.getStreamById = function(id) {
-                                  try {
-                                    var localStreams = this.getLocalStreams();
-                                    var remoteStreams = this.getRemoteStreams();
-                                    var i;
-                                    for (i = 0; i < localStreams.length; i++) {
-                                     if (localStreams[i].id == id)
-                                       return localStreams[i];
-                                    }
-                                    for (i = 0; i < remoteStreams.length; i++) {
-                                     if (remoteStreams[i].id == id)
-                                       return remoteStreams[i];
-                                    }
-                                  } catch(e) {}
-                                  return null;
-                                }
+                               
                                 
                                var socket = new WebSocket('ws://192.168.1.71:2000');
                                var db;
@@ -142,17 +126,15 @@
 				function retrieveData() {
                                     if(localStorage.getItem("ISO_INFO")){
                                         var infoObj = JSON.parse(localStorage.getItem("ISO_INFO"));
-                                        
+                                        var customerName = infoObj.name;
+                                        var customerAge = infoObj.age;
+                                        var customerGender = infoObj.gender;
 
                                         // $("#labelName").html(infoObj.name);
                                         // $("#labelAge").html(infoObj.age);
                                         // $("#labelGender").html(infoObj.gender);
-                                        var message = "pid=2&profileid=1&pname=" + infoObj.name;
+                                        var message = "pid=0&profileid=0&pname=" + customerName + "&page=" + customerAge + "&pgender=" + customerGender;
                                         socket.send(message);
-                                          
-                                        var customerName = infoObj.name;
-                                        var customerAge = infoObj.age;
-                                        var customerGender = infoObj.gender;
                                         
                                         $("#labelName").val(customerName);
                                         $("#labelAge").val(customerAge);
@@ -169,42 +151,7 @@
                                         document.getElementById("details").style.display = "none";
                                     }
 				}
-                                
-                                
-                                //instead of Local Storage, i preferred Sqlite
-                                function createDatabase(){                                    
-                                    try{
-                                     if(window.openDatabase){
-                                            console.log("Support SQLITE!!");
-                                             var shortName   =  'mydb';
-                                             var version   =  '1.0';
-                                             var displayName  =  'Thor Information';
-                                             var maxSize   =  2 * 1024 * 1024; // in bytes
-                                             db    =  openDatabase(shortName, version, displayName, maxSize);
-                                             console.log('Sqlite Database created');
-                                         }
-                                    }catch(e){
-                                        console.log("NOT Support SQLITE!!");
-                                        console.log(e);
-                                    }
-                                }
-                                
-                                function createCustomerTable(customerName, customerAge, customerGender){                                    
-                                    try{
-                                     db.transaction(function (tx) {
-                                        tx.executeSql('CREATE TABLE IF NOT EXISTS CUSTOMERS (id unique, name, age, gender)');
-                                        //tx.executeSql('INSERT INTO CUSTOMERS (name, age, gender) VALUES (' + customerName +', ' + customerAge +', ' + customerGender +' )');
-                                        tx.executeSql('INSERT INTO CUSTOMERS (name, age, gender) VALUES ("' + customerName +'", "' + customerAge +'", "' + customerGender +'" )');
-                                        
-                                     });
-                                    }catch(e){
-                                     console.log(e);
-                                    }
-                                }
-                                
-                                
-                                
-                                
+
                                 
                                 function redirectToHulk() {                                                                        
                                     window.location.href = 'hulk_mobile.html';

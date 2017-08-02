@@ -194,53 +194,6 @@ c)
                     //$('#modal').show();
                     //stopMovie();
                     
-                   
-                    
-                    createDatabase();
-                    
-                    
-                    function createDatabase(){                                    
-                            var shortName   =  'mydb';
-                                             var version   =  '1.0';
-                                             var displayName  =  'Thor Information';
-                                             var maxSize   =  2 * 1024 * 1024; // in bytes
-                            var db    =  openDatabase(shortName, version, displayName, maxSize);
-                            console.log('Sqlite Database created');
-                            var msg;
-
-//                            db.transaction(function (tx) {
-//                               tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique, log)');
-//                               tx.executeSql('INSERT INTO LOGS (log) VALUES ("nando")');
-//                               tx.executeSql('INSERT INTO LOGS (log) VALUES ("lala")');
-//                               msg = '<p>Log message created and row inserted.</p>';                               
-//                               console.log(msg);
-//                            });
-
-                                db.transaction(function (tx) {
-                                    tx.executeSql('CREATE TABLE IF NOT EXISTS CUSTOMERS (id unique, name, age, gender)');
-                                    tx.executeSql('INSERT INTO CUSTOMERS (name, age, gender) VALUES ("' + 'Name' +'", "' + '8' +'", "' + 'M' +'" )');                                        
-                                });
-
-                            db.transaction(function (tx) {
-                               tx.executeSql('SELECT * FROM CUSTOMERS', [], function (tx, results) {
-                                  var len = results.rows.length, i;
-                                  msg = "<p>Found rows: " + len + "</p>";
-                                  console.log(msg);
-
-                                  for (i = 0; i < len; i++){
-                                     msg = "<p><b>" + results.rows.item(i).name + "</b></p>";
-                                     console.log(msg)
-                                  }
-                               }, null);
-                            });
-                    }
-                    
-                    
-                              
-                    
-                    
-                    
-
                     // promo 1 - 3 tiles
                         var p1 = {
                             "items": [
