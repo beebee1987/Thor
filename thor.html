@@ -35,7 +35,7 @@
 		        <div class="input-group">
 		          <input type="radio" name="gender" value="male" id="gender-male"/>
 		          <label for="gender-male">Male</label>
-		          <input type="radio" name="gender" value="female" id="gender-male"/>
+		          <input type="radio" name="gender" value="female" id="gender-female"/>
 		          <label for="gender-female">Female</label>
 		        </div>
 		      </div>
@@ -96,16 +96,15 @@
                         
 
                                 socket.onopen = function(event) {
-                                    console.log("Thor is connected for web secoket!!!");
-                                    var message = 'Here Vince, i coming~';
+                                    var message = 'Thor';
 
                                     // Send the message through the WebSocket.
                                     socket.send(message);
                                 };
 
-				localStorage.removeItem("ISO_INFO");
+				//localStorage.removeItem("ISO_INFO");
                                 //createDatabase();
-				//retrieveData();
+				retrieveData();
 
 				$('#register').click(function(){                       
 					
