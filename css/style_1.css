@@ -593,7 +593,6 @@ body.modal-active {
 #modal-container.one .modal-background .modal {
     transform: scale(0);
     animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-    overflow: scroll;
 }
 
 #modal-container.one.out {
@@ -1642,19 +1641,11 @@ change this css
 }
 
 
-/*#myvideo{
+#myvideo{
     min-width: 100%;
     min-height: 100%;
     margin-top:20px;
-    width: 270px;
+    width: 100%;
     height: auto;
-}*/
-
-#myvideo {
-        min-width: 570px;
-        min-height: 76%; 
-        margin-top: 150px;
-        width: 270px;
-        position: absolute;
-        left: 50px;
 }
+

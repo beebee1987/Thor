@@ -1,164 +1,170 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Thor</title>
-		<meta name="description" content="Registration Form" />
-		<meta name="keywords" content="isometric, grid, images, masonry, perspective" />
-		<meta name="author" content="KC" />
-		<link rel="shortcut icon" href="favicon.ico">
-		<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Thor</title>
+        <meta name="description" content="Registration Form" />
+        <meta name="keywords" content="isometric, grid, images, masonry, perspective" />
+        <meta name="author" content="KC" />
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
        	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-		<link rel="stylesheet" type="text/css" href="css/formstyle.css" />
+        <link rel="stylesheet" type="text/css" href="css/formstyle.css" />
 
-	</head>
-	<body>
-		
-		<div class="container" id="registration_form">
-		  
-		    <div class="row">
-		      <h4>Customer Details</h4>
-		      <div class="input-group input-group-icon">
-		        <input type="text" id="txtName" placeholder="Name"/>
-		        <div class="input-icon"><i class="fa fa-user"></i></div>
-		      </div>
-		      <div class="input-group input-group-icon">
-		        <input type="text" id="txtAge" placeholder="Age"/>
-		        <div class="input-icon"><i class="fa fa-birthday-cake"></i></div>
-		      </div>
-		    </div>
-		    <div class="row">		      
-		      <div class="col-half">
-		        <h4>Gender</h4>
-		        <div class="input-group">
-		          <input type="radio" name="gender" value="male" id="gender-male"/>
-		          <label for="gender-male">Male</label>
-		          <input type="radio" name="gender" value="female" id="gender-female"/>
-		          <label for="gender-female">Female</label>
-		        </div>
-		      </div>
-		    </div>
+    </head>
+    <body>
 
-		    <button id="register">Register</button>	
-		  
-		    <!-- <div class="row">
-		      <h4>Terms and Conditions</h4>
-		      <div class="input-group">
-		        <input type="checkbox" id="terms"/>
-		        <label for="terms">I accept the terms and conditions for signing up to this service, and hereby confirm I have read the privacy policy.</label>
-		      </div>
-		    </div> -->
-		 
-		</div>
+        <div class="container" id="registration_form">
 
-			
+            <div class="row">
+                <h4>Customer Details</h4>
+                <div class="input-group input-group-icon">
+                    <input type="text" id="txtName" placeholder="Name"/>
+                    <div class="input-icon"><i class="fa fa-user"></i></div>
+                </div>
+                <div class="input-group input-group-icon">
+                    <input type="text" id="txtAge" placeholder="Age"/>
+                    <div class="input-icon"><i class="fa fa-birthday-cake"></i></div>
+                </div>
+            </div>
+            <div class="row">		      
+                <div class="col-half">
+                    <h4>Gender</h4>
+                    <div class="input-group">
+                        <input type="radio" name="gender" value="M" id="gender-male"/>
+                        <label for="gender-male">Male</label>
+                        <input type="radio" name="gender" value="F" id="gender-female"/>
+                        <label for="gender-female">Female</label>
+                    </div>
+                </div>
+            </div>
+
+            <button id="register">Register</button>	
+
+            <!-- <div class="row">
+              <h4>Terms and Conditions</h4>
+              <div class="input-group">
+                <input type="checkbox" id="terms"/>
+                <label for="terms">I accept the terms and conditions for signing up to this service, and hereby confirm I have read the privacy policy.</label>
+              </div>
+            </div> -->
+
+        </div>
 
 
-		<div class="container" id="details">
-		  
-		    <div class="row">
-		      <h4>Customer Details</h4>
-		      <div class="input-group input-group-icon">
-		        <input type="text" id="labelName" placeholder="Name" disabled="true" />
-		        <div class="input-icon"><i class="fa fa-user"></i></div>
-		      </div>
-		      <div class="input-group input-group-icon">
-		        <input type="text" id="labelAge" placeholder="Age" disabled="true"/>
-		        <div class="input-icon"><i class="fa fa-birthday-cake"></i></div>
-		      </div>
-		      <div class="input-group input-group-icon">
-		        <input type="text" id="labelGender" placeholder="Gender" disabled="true"/>
-		        <div class="input-icon"><i class="fa fa-arrows"></i></div>
-		      </div>
-		    </div>
-		  
-		</div>	
 
-			
 
-		
-		<!-- <a class="pater" href="https://goo.gl/k3vxNx">
-			<h2 class="pater__title" aria-label="PageCloud"><img src="img/PageCloud_logo.svg" alt="PageCloud Logo"/></h2>
-			<p class="pater__desc">Take control of your website with features you won't find anywhere else. Find out why PageCloud is the world's most advanced website creator today!</p>
-		</a> -->
-		
-		<script src="js/jquery.js" type="text/javascript"></script>		
-		<!--script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script-->
-    	<script src="js/index.js"></script>
-		<script>                    
-		(function() {
-                               
-                                
-                               var socket = new WebSocket('ws://192.168.1.71:2000');
-                               var db;
+        <div class="container" id="details">
+
+            <div class="row">
+                <h4>Customer Details</h4>
+                <div class="input-group input-group-icon">
+                    <input type="text" id="labelName" placeholder="Name" disabled="true" />
+                    <div class="input-icon"><i class="fa fa-user"></i></div>
+                </div>
+                <div class="input-group input-group-icon">
+                    <input type="text" id="labelAge" placeholder="Age" disabled="true"/>
+                    <div class="input-icon"><i class="fa fa-birthday-cake"></i></div>
+                </div>
+                <div class="input-group input-group-icon">
+                    <input type="text" id="labelGender" placeholder="Gender" disabled="true"/>
+                    <div class="input-icon"><i class="fa fa-arrows"></i></div>
+                </div>
+            </div>
+
+        </div>	
+
+
+
+
+        <!-- <a class="pater" href="https://goo.gl/k3vxNx">
+                <h2 class="pater__title" aria-label="PageCloud"><img src="img/PageCloud_logo.svg" alt="PageCloud Logo"/></h2>
+                <p class="pater__desc">Take control of your website with features you won't find anywhere else. Find out why PageCloud is the world's most advanced website creator today!</p>
+        </a> -->
+
+        <script src="js/jquery.js" type="text/javascript"></script>		
+        <!--script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script-->
+        <script src="js/index.js"></script>
+        <script>
+            (function () {
+
+                localStorage.removeItem("ISO_INFO");
+                var socket = new WebSocket('ws://192.168.1.117:2000');
+                var db;
+
+
+                socket.onopen = function (event) {
+                    var message = 'Thor';
+
+                    // Send the message through the WebSocket.
+                    socket.send(message);
+                    retrieveData();
+                };
+
+              
+                //createDatabase();
+                
+
+                $('#register').click(function () {
+
+                    var info = {
+                        name: $("#txtName").val(),
+                        age: $("#txtAge").val(),
+                        gender: $('input[name="gender"]:checked').val(),
+                    }
+
+
+                    localStorage.setItem("ISO_INFO", JSON.stringify(info));
+                    retrieveData();
+                    redirectToHulk();
+
+                });
+
+
+                function retrieveData() {
+                    if (localStorage.getItem("ISO_INFO")) {
+                        var infoObj = JSON.parse(localStorage.getItem("ISO_INFO"));
                         
+                       
+                        
+                        var customerName = infoObj.name;
+                        var customerAge = infoObj.age;
+                        var customerGender = infoObj.gender;
+                        
+                         console.log(infoObj, customerName, customerAge, customerGender);
 
-                                socket.onopen = function(event) {
-                                    var message = 'Thor';
+                        // $("#labelName").html(infoObj.name);
+                        // $("#labelAge").html(infoObj.age);
+                        // $("#labelGender").html(infoObj.gender);
+                        var message = "pid=0&pname=" + customerName + "&page=" + customerAge + "&pgender=" + customerGender;
+                        socket.send(message);
 
-                                    // Send the message through the WebSocket.
-                                    socket.send(message);
-                                };
+                        $("#labelName").val(customerName);
+                        $("#labelAge").val(customerAge);
+                        $("#labelGender").val(customerGender);
 
-				//localStorage.removeItem("ISO_INFO");
-                                //createDatabase();
-				retrieveData();
-
-				$('#register').click(function(){                       
-					
-					var info = {
-						name: $("#txtName").val(),
-						age: $("#txtAge").val(),
-						gender: $('input[name="gender"]:checked').val(),
-					}
-					
-
-					localStorage.setItem("ISO_INFO",JSON.stringify(info));
-                                        retrieveData();
-                                        redirectToHulk();
-					
-                                });
-
-
-				function retrieveData() {
-                                    if(localStorage.getItem("ISO_INFO")){
-                                        var infoObj = JSON.parse(localStorage.getItem("ISO_INFO"));
-                                        var customerName = infoObj.name;
-                                        var customerAge = infoObj.age;
-                                        var customerGender = infoObj.gender;
-
-                                        // $("#labelName").html(infoObj.name);
-                                        // $("#labelAge").html(infoObj.age);
-                                        // $("#labelGender").html(infoObj.gender);
-                                        var message = "pid=0&profileid=0&pname=" + customerName + "&page=" + customerAge + "&pgender=" + customerGender;
-                                        socket.send(message);
-                                        
-                                        $("#labelName").val(customerName);
-                                        $("#labelAge").val(customerAge);
-                                        $("#labelGender").val(customerGender);
-                                        
 //                                        createDatabase();
 //                                        createCustomerTable(customerName, customerAge, customerGender);
-                                        redirectToHulk();
+                        redirectToHulk();
 
-                                        document.getElementById("registration_form").style.display = "none";
-                                        document.getElementById("details").style.display = "block";
-                                    }else{
-                                        document.getElementById("registration_form").style.display = "block";
-                                        document.getElementById("details").style.display = "none";
-                                    }
-				}
-
-                                
-                                function redirectToHulk() {                                                                        
-                                    window.location.href = 'hulk_mobile.html';
-				}
-                    
+                        document.getElementById("registration_form").style.display = "none";
+                        document.getElementById("details").style.display = "block";
+                    } else {
+                        document.getElementById("registration_form").style.display = "block";
+                        document.getElementById("details").style.display = "none";
+                    }
+                }
 
 
-		})();
-		</script>
-	</body>
+                function redirectToHulk() {
+                    window.location.href = 'hulk_mobile.html';
+                }
+
+
+
+            })();
+        </script>
+    </body>
 </html>

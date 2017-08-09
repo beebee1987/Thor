@@ -52,7 +52,7 @@ c)
                         <div class="flex-grid">
                             <div class="col">
                                 <div class="threesixty-wrapper">
-                                    <div class="threesixty" data-path="img/360/p11/p11{index}.jpg" data-count="16">
+                                    <div class="threesixty" data-path="img/360/p11/p11{index}.jpg" data-count="15">
                                         put your preloader here 
                                         <div class="ui-spinner">
                                             <span class="side side-left">
@@ -184,6 +184,7 @@ c)
         <script src="https://maps.googleapis.com/maps/api/js?sensor=false&language=en" type="text/javascript"></script>
         <script src="js/weatherslider.kreaturamedia.jquery.js" type="text/javascript"></script>
         <script src="js/jquery.threesixty.js" type="text/javascript"></script>		
+        <script src="https://www.promisejs.org/polyfills/promise-7.0.4.min.js"></script>
         <script>
             (function () {
 
@@ -194,949 +195,15 @@ c)
                 //$('#modal').show();
                 //stopMovie();
 
-                // promo 1 - 3 tiles
-                var p1 = {
-                    "promotion": {"promotion_id": 2233, "effective_date": "2017-07-11T12:00:00", "exppire_date": "2017-08-31T23:59:59"},
-                    "item_list": [
-                        {
-                            "product": {
-                                "id": 1,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Dairy",
-                                "mainImage": "img/p1/p11.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Dutch Lady Fresh Milk",
-                                "unit_price": 0.80,
-                                "promotion_price": "6.80",
-                                "selling_price": "7.50",
-                                "location": "L6"
-                            },
-                            "promotion_price": 6.80
-                        },
-                        {
-                            "product": {
-                                "id": 2,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Home & Lightings",
-                                "mainImage": "img/p1/p12.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Phillips LED Light",
-                                "unit_price": 0.80,
-                                "promotion_price": "4.80",
-                                "selling_price": "5.60",
-                                "location": "L6"
-                            },
-                            "promotion_price": 4.80
-                        },
-                        {
-                            "product": {
-                                "id": 3,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Health & Wellness",
-                                "mainImage": "img/p1/p13.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Birds Nest * 6",
-                                "unit_price": 0.80,
-                                "promotion_price": "22.00",
-                                "selling_price": "19.40",
-                                "location": "L6"
-                            },
-                            "promotion_price": 22.00
-                        },
-                        {
-                            "product": {
-                                "id": 4,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Canned Food",
-                                "mainImage": "img/p1/p14.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Braised Beans",
-                                "unit_price": 0.80,
-                                "promotion_price": "3.00",
-                                "selling_price": "4.50",
-                                "location": "L6"
-                            },
-                            "promotion_price": 3.00
-                        },
-                        {
-                            "product": {
-                                "id": 5,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Car Care",
-                                "mainImage": "img/p1/p15.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Car Wax",
-                                "unit_price": 0.80,
-                                "promotion_price": "25",
-                                "selling_price": "30",
-                                "location": "L6"
-                            },
-                            "promotion_price": 25.00
-                        },
-                        {
-                            "product": {
-                                "id": 6,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Snacks",
-                                "mainImage": "img/p1/p16.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Vochelle Chocolate",
-                                "unit_price": 0.80,
-                                "promotion_price": "5.50",
-                                "selling_price": "8.00",
-                                "location": "L9"
-                            },
-                            "promotion_price": 5.50
-                        }
-                    ]
-                };
+                var width = screen.width;
+                var sidebar = $('.sidebar');
+                var spanWelcome = $('.spanWelcome');
+                var greetingWord = '';
+                var $threeSixty = $('.threesixty');
 
-                // for women
-                var p2 = {
-                    "promotion": {"promotion_id": 2233, "effective_date": "2017-07-11T12:00:00", "exppire_date": "2017-08-31T23:59:59"},
-                    "item_list": [
-                        {
-                            "product": {
-                                "id": 7,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Cosmetic",
-                                "mainImage": "img/p2/p21.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Face Cream",
-                                "unit_price": 0.80,
-                                "promotion_price": "25",
-                                "selling_price": "30",
-                                "location": "L6"
-                            },
-                            "promotion_price": 25.00
-                        },
-                        {
-                            "product": {
-                                "id": 8,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Accessories",
-                                "mainImage": "img/p2/p19.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Umbrella",
-                                "unit_price": 0.80,
-                                "promotion_price": "12.50",
-                                "selling_price": "15.00",
-                                "location": "L1"
-                            },
-                            "promotion_price": 12.50
-                        },
-                        {
-                            "product": {
-                                "id": 9,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Dental Floss",
-                                "mainImage": "img/p2/p23.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Colgate",
-                                "unit_price": 0.80,
-                                "promotion_price": "6.00",
-                                "selling_price": "7.50",
-                                "location": "L7"
-                            },
-                            "promotion_price": 6.00
-                        },
-                        {
-                            "product": {
-                                "id": 10,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Mamee Cup Noddles",
-                                "mainImage": "img/p2/p24.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Mamee Chef",
-                                "unit_price": 0.80,
-                                "promotion_price": "1.60",
-                                "selling_price": "2.50",
-                                "location": "L9"
-                            },
-                            "promotion_price": 1.60
-                        },
-                        {
-                            "product": {
-                                "id": 11,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Sun Block",
-                                "mainImage": "img/p2/p18.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "SunPlay",
-                                "unit_price": 0.80,
-                                "promotion_price": "30",
-                                "selling_price": "35",
-                                "location": "L7"
-                            },
-                            "promotion_price": 30.00
-                        },
-                        {
-                            "product": {
-                                "id": 12,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Toner",
-                                "mainImage": "img/p2/p17.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Yogurt",
-                                "unit_price": 0.80,
-                                "promotion_price": "80",
-                                "selling_price": "120",
-                                "location": "L6"
-                            },
-                            "promotion_price": 80.00
-                        }
-                    ]
-                };
-
-                //for kids
-                var p3 = {
-                    "promotion": {"promotion_id": 2233, "effective_date": "2017-07-11T12:00:00", "exppire_date": "2017-08-31T23:59:59"},
-                    "item_list": [
-                        {
-                            "product": {
-                                "id": 13,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Chocolate",
-                                "mainImage": "img/p3/p16.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Voghelle",
-                                "unit_price": 0.80,
-                                "promotion_price": "5.50",
-                                "selling_price": "8.00",
-                                "location": "L9"
-                            },
-                            "promotion_price": 5.50
-                        },
-                        {
-                            "product": {
-                                "id": 14,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Dairy",
-                                "mainImage": "img/p3/p11.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Dutch Lady Milk",
-                                "unit_price": 0.80,
-                                "promotion_price": "6.80",
-                                "selling_price": "7.50",
-                                "location": "L9"
-                            },
-                            "promotion_price": 6.80
-                        },
-                        {
-                            "product": {
-                                "id": 15,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Mamee Cup Noddles",
-                                "mainImage": "img/p3/p24.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Mamee Cup Noodles",
-                                "unit_price": 0.80,
-                                "promotion_price": "1.60",
-                                "selling_price": "2.50",
-                                "location": "L9"
-                            },
-                            "promotion_price": 1.60
-                        },
-                        {
-                            "product": {
-                                "id": 16,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Japanese Snack",
-                                "mainImage": "img/p3/p34.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Scallop",
-                                "unit_price": 0.80,
-                                "promotion_price": "18",
-                                "selling_price": "26",
-                                "location": "L9"
-                            },
-                            "promotion_price": 18.00
-                        },
-                        {
-                            "product": {
-                                "id": 17,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Sun Block",
-                                "mainImage": "img/p3/p35.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "SunPlay",
-                                "unit_price": 0.80,
-                                "promotion_price": "30",
-                                "selling_price": "35",
-                                "location": "L7"
-                            },
-                            "promotion_price": 30.00
-                        }
-                    ]
-                };
-
-                //for general
-                var p4 = {
-                    "promotion": {"promotion_id": 2233, "effective_date": "2017-07-11T12:00:00", "exppire_date": "2017-08-31T23:59:59"},
-                    "item_list": [
-                        {
-                            "product": {
-                                "id": 18,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Cosmetic",
-                                "mainImage": "img/p2/p21.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Face Cream",
-                                "unit_price": 0.80,
-                                "promotion_price": "25",
-                                "selling_price": "30",
-                                "location": "L6"
-                            },
-                            "promotion_price": 25.00
-                        },
-                        {
-                            "product": {
-                                "id": 19,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Herbs and Spices",
-                                "mainImage": "img/p4/p25.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Pepper",
-                                "unit_price": 0.80,
-                                "promotion_price": "2.00",
-                                "selling_price": "3.80",
-                                "location": "L7"
-                            },
-                            "promotion_price": 2.00
-                        },
-                        {
-                            "product": {
-                                "id": 20,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Dental Care",
-                                "mainImage": "img/p2/p23.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Colgate Dental Floss",
-                                "unit_price": 0.80,
-                                "promotion_price": "7.00",
-                                "selling_price": "8.50",
-                                "location": "L2"
-                            },
-                            "promotion_price": 7.00
-                        },
-                        {
-                            "product": {
-                                "id": 21,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Cup Noodles",
-                                "mainImage": "img/p3/p24.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Mamee Cup Noodles",
-                                "unit_price": 0.80,
-                                "promotion_price": "1.60",
-                                "selling_price": "2.50",
-                                "location": "L9"
-                            },
-                            "promotion_price": 1.60
-                        },
-                        {
-                            "product": {
-                                "id": 22,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Toner",
-                                "mainImage": "img/p2/p17.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Yogurt",
-                                "unit_price": 0.80,
-                                "promotion_price": "80",
-                                "selling_price": "120",
-                                "location": "L6"
-                            },
-                            "promotion_price": 80.00
-                        },
-                        {
-                            "product": {
-                                "id": 24,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Dairy",
-                                "mainImage": "img/p1/p11.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Dutch Lady Fresh Milk",
-                                "unit_price": 0.80,
-                                "promotion_price": "6.80",
-                                "selling_price": "7.50",
-                                "location": "L6"
-                            },
-                            "promotion_price": 6.80
-                        },
-                        {
-                            "product": {
-                                "id": 25,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Home & Lightings",
-                                "mainImage": "img/p1/p12.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Light bulb",
-                                "unit_price": 0.80,
-                                "promotion_price": "7.50",
-                                "selling_price": "8.90",
-                                "location": "L6"
-                            },
-                            "promotion_price": 7.50
-                        },
-                        {
-                            "product": {
-                                "id": 26,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Health & Wellness",
-                                "mainImage": "img/p1/p13.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Birds Nest * 6",
-                                "unit_price": 0.80,
-                                "promotion_price": "40.50",
-                                "selling_price": "50.00",
-                                "location": "L6"
-                            },
-                            "promotion_price": 40.50
-                        },
-                        {
-                            "product": {
-                                "id": 27,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Canned Food",
-                                "mainImage": "img/p1/p14.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Braised Beans",
-                                "unit_price": 0.80,
-                                "promotion_price": "6.80",
-                                "selling_price": "10.00",
-                                "location": "L6"
-                            },
-                            "promotion_price": 6.80
-                        },
-                        {
-                            "product": {
-                                "id": 28,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Japense Snack",
-                                "mainImage": "img/p4/p32.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Scallop",
-                                "unit_price": 0.80,
-                                "promotion_price": "12.00",
-                                "selling_price": "8.90",
-                                "location": "L6"
-                            },
-                            "promotion_price": 12.00
-                        },
-                        {
-                            "product": {
-                                "id": 29,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Skin Care and Healthy",
-                                "mainImage": "img/p4/p22.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Mask",
-                                "unit_price": 0.80,
-                                "promotion_price": "10.00",
-                                "selling_price": "12.50",
-                                "location": "L6"
-                            },
-                            "promotion_price": 10.00
-                        },
-                        {
-                            "product": {
-                                "id": 30,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Food and Beverage",
-                                "mainImage": "img/p3/p34.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Sugar",
-                                "unit_price": 0.80,
-                                "promotion_price": "3.50",
-                                "selling_price": "4.20",
-                                "location": "L6"
-                            },
-                            "promotion_price": 3.50
-                        }
-                    ]
-                };
-
-
-                //sunny day
-                var w1 = {
-                    "promotion": {"promotion_id": 2233, "effective_date": "2017-07-11T12:00:00", "exppire_date": "2017-08-31T23:59:59"},
-                    "item_list": [
-                        {
-                            "product": {
-                                "id": 31,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Cosmetic",
-                                "mainImage": "img/w1/w21.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Face Cream",
-                                "unit_price": 0.80,
-                                "promotion_price": "25",
-                                "selling_price": "30",
-                                "location": "L6"
-                            },
-                            "promotion_price": 25.00
-                        },
-                        {
-                            "product": {
-                                "id": 32,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Sun Block",
-                                "mainImage": "img/w1/w35.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "SunPlay",
-                                "unit_price": 0.80,
-                                "promotion_price": "30",
-                                "selling_price": "35",
-                                "location": "L7"
-                            },
-                            "promotion_price": 30.00
-                        },
-                        {
-                            "product": {
-                                "id": 33,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Health & Wellness",
-                                "mainImage": "img/w1/w13.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Birds Nest * 6",
-                                "unit_price": 0.80,
-                                "promotion_price": "40.50",
-                                "selling_price": "50.00",
-                                "location": "L6"
-                            },
-                            "promotion_price": 40.50
-                        },
-                        {
-                            "product": {
-                                "id": 34,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Cup Noodles",
-                                "mainImage": "img/w1/w24.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Mamee Cup Noodles",
-                                "unit_price": 0.80,
-                                "promotion_price": "1.60",
-                                "selling_price": "2.50",
-                                "location": "L9"
-                            },
-                            "promotion_price": 1.60
-                        },
-                        {
-                            "product": {
-                                "id": 35,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Toner",
-                                "mainImage": "img/w1/w17.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Yogurt",
-                                "unit_price": 0.80,
-                                "promotion_price": "80",
-                                "selling_price": "120",
-                                "location": "L6"
-                            },
-                            "promotion_price": 80.00
-                        },
-                        {
-                            "product": {
-                                "id": 37,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Dairy",
-                                "mainImage": "img/w1/w11.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Dutch Lady Fresh Milk",
-                                "unit_price": 0.80,
-                                "promotion_price": "6.80",
-                                "selling_price": "7.50",
-                                "location": "L6"
-                            },
-                            "promotion_price": 6.80
-                        }
-                    ]
-                };
-
-                //cloudy day
-                var w2 = {
-                    "promotion": {"promotion_id": 2233, "effective_date": "2017-07-11T12:00:00", "exppire_date": "2017-08-31T23:59:59"},
-                    "item_list": [
-                        {
-                            "product": {
-                                "id": 38,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Cosmetic",
-                                "mainImage": "img/w2/w21.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Face Cream",
-                                "unit_price": 0.80,
-                                "promotion_price": "25",
-                                "selling_price": "30",
-                                "location": "L6",
-                                "colour": "Green and Yellow"
-                            },
-                            "promotion_price": 25.00
-                        },
-                        {
-                            "product": {
-                                "id": 39,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Herbs and Spices",
-                                "mainImage": "img/w2/w25.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Pepper",
-                                "unit_price": 0.80,
-                                "promotion_price": "2.00",
-                                "selling_price": "3.80",
-                                "location": "L7",
-                                "colour": "Green and Yellow"
-                            },
-                            "promotion_price": 2.00
-                        },
-                        {
-                            "product": {
-                                "id": 40,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Dental Care",
-                                "mainImage": "img/w2/w23.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Colgate Dental Floss",
-                                "unit_price": 0.80,
-                                "promotion_price": "7.00",
-                                "selling_price": "8.50",
-                                "location": "L2",
-                                "colour": "Green and Yellow"
-                            },
-                            "promotion_price": 7.00
-                        },
-                        {
-                            "product": {
-                                "id": 41,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Cup Noodles",
-                                "mainImage": "img/w2/w24.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Mamee Cup Noodles",
-                                "unit_price": 0.80,
-                                "promotion_price": "1.60",
-                                "selling_price": "2.50",
-                                "location": "L9",
-                                "colour": "Green and Yellow"
-                            },
-                            "promotion_price": 1.60
-                        },
-                        {
-                            "product": {
-                                "id": 42,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Toner",
-                                "mainImage": "img/w2/w17.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Yogurt",
-                                "unit_price": 0.80,
-                                "promotion_price": "80",
-                                "selling_price": "120",
-                                "location": "L6",
-                                "colour": "Green and Yellow"
-                            },
-                            "promotion_price": 80.00
-                        }
-                    ]
-                };
-
-
-                var w3 = {
-                    "promotion": {"promotion_id": 2233, "effective_date": "2017-07-11T12:00:00", "exppire_date": "2017-08-31T23:59:59"},
-                    "item_list": [
-                        {
-                            "product": {
-                                "id": 44,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Canned Food",
-                                "mainImage": "img/w3/w14.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Braised Beans",
-                                "unit_price": 0.80,
-                                "promotion_price": "6.00",
-                                "selling_price": "8.00",
-                                "location": "A1"
-                            },
-                            "promotion_price": 6.00
-                        },
-                        {
-                            "product": {
-                                "id": 45,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Cup Noodles",
-                                "mainImage": "img/w3/w24.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Mamee Chef Cup Noodles",
-                                "unit_price": 0.80,
-                                "promotion_price": "3.50",
-                                "selling_price": "4.80",
-                                "location": "A2"
-                            },
-                            "promotion_price": 3.50
-                        },
-                        {
-                            "product": {
-                                "id": 46,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Automotive",
-                                "mainImage": "img/w3/w26.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Gear Oil",
-                                "unit_price": 0.80,
-                                "promotion_price": "15.00",
-                                "selling_price": "18.00",
-                                "location": "A3"
-                            },
-                            "promotion_price": 15.00
-                        },
-                        {
-                            "product": {
-                                "id": 47,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Accessories",
-                                "mainImage": "img/w3/w33.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "shaver",
-                                "unit_price": 0.80,
-                                "promotion_price": "6.00",
-                                "selling_price": "7.50",
-                                "location": "A4"
-                            },
-                            "promotion_price": 6.00
-                        },
-                        {
-                            "product": {
-                                "id": 48,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Food and Beverage",
-                                "mainImage": "img/w3/w34.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Sugar",
-                                "unit_price": 0.80,
-                                "promotion_price": "8.90",
-                                "selling_price": "10.00",
-                                "location": "A5"
-                            },
-                            "promotion_price": 8.90
-                        }
-                        // {   
-                        //     "id": 50,
-                        //     "name": "Rain Gear", 
-                        //     "mainImage": "img/w4/w45.jpg", 
-                        //    "sideImage1": "img/layer1.jpg",
-                        //   "sideImage2": "img/layer2.jpg",
-                        //     "description": "Poncho",
-                        //   "promotion_price": "20.00",
-                        //   "selling_price": "30.00",
-                        //   "location": "A6",
-
-                        // }
-                    ]
-                };
-
-
-                var w4 = {
-                    "promotion": {"promotion_id": 2233, "effective_date": "2017-07-11T12:00:00", "exppire_date": "2017-08-31T23:59:59"},
-                    "item_list": [
-                        {
-                            "product": {
-                                "id": 51,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Rain Gear",
-                                "mainImage": "img/w4/w41.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Umbrella",
-                                "unit_price": 0.80,
-                                "promotion_price": "8.00",
-                                "selling_price": "15.00",
-                                "location": "A1"
-                            },
-                            "promotion_price": 8.00
-                        },
-                        {
-                            "product": {
-                                "id": 52,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Rain Gear",
-                                "mainImage": "img/w4/w42.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Rain Shoes",
-                                "unit_price": 0.80,
-                                "promotion_price": "52.00",
-                                "selling_price": "75.80",
-                                "location": "A2"
-                            },
-                            "promotion_price": 52.40
-                        },
-                        {
-                            "product": {
-                                "id": 53,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Rain Gear",
-                                "mainImage": "img/w4/w43.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Rain Jacket",
-                                "unit_price": 0.80,
-                                "promotion_price": "60.00",
-                                "selling_price": "130.00",
-                                "location": "A3"
-                            },
-                            "promotion_price": 60.00
-                        },
-                        {
-                            "product": {
-                                "id": 54,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Rain Gear",
-                                "mainImage": "img/w4/w44.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Waterproof bag",
-                                "unit_price": 0.80,
-                                "promotion_price": "80.00",
-                                "selling_price": "100.00",
-                                "location": "A4"
-                            },
-                            "promotion_price": 80.00
-                        },
-                        {
-                            "product": {
-                                "id": 55,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Rain Gear",
-                                "mainImage": "img/w4/w44.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Rubber Shoe",
-                                "unit_price": 0.80,
-                                "promotion_price": "15.00",
-                                "selling_price": "25.00",
-                                "location": "A5"
-                            },
-                            "promotion_price": 15.00
-                        },
-                        {
-                            "product": {
-                                "id": 57,
-                                "product_code": "H74482U22000",
-                                "sku": "K8824465",
-                                "name": "Rain Gear",
-                                "mainImage": "img/w4/w45.jpg",
-                                "sideImage1": "img/layer1.jpg",
-                                "sideImage2": "img/layer2.jpg",
-                                "description": "Poncho",
-                                "unit_price": 0.80,
-                                "promotion_price": "20.00",
-                                "selling_price": "30.00",
-                                "location": "A6"
-                            },
-                            "promotion_price": 20.00
-                        }
-                    ]
-                };
                 var json;
 
-                var socket = new WebSocket('ws://192.168.1.71:2000');
+                var socket = new WebSocket('ws://192.168.1.117:2000');
 
 //                        window.onload = function () {
 //                            document.getElementById('button').onclick = function () {
@@ -1171,82 +238,60 @@ c)
                 // Handle messages sent by the server.
                 socket.onmessage = function (event) {
                     var data = event.data;
-
 //                      pid=100&profileid=100 // 101 101 //video                      
                     var dataSplited = data.split("="); //pid=1&profileid=1&pname=KC
+                    if(dataSplited.length < 2){
+                        return;
+                    }
+                    
                     var dataSplited2 = dataSplited[1].split("&"); //pid
-                    var dataSplited3 = dataSplited[2].split("&"); //profileID
-                    var dataSplited4 = dataSplited[3].split("&"); //customer name
-                    var dataSplited5 = dataSplited[4].split("&"); //customer age
-                    //pid=100&profileid=100&pname=123&page=12&pgender=M
+                    var dataSplited3 = dataSplited[2].split("&"); //customer name
+                    var dataSplited4 = dataSplited[3].split("&"); //customer age
+                    //pid=100&pname=123&page=12&pgender=M
+                    
                     var pId = dataSplited2[0]; // pId
-                    var profileId = dataSplited3[0]; //profileId
-                    var pName = dataSplited4[0]; //customer name
-                    var pAge = dataSplited5[0]; //customer age
-                    var pGender = dataSplited[5]; //customer age
+                    var pName = dataSplited3[0]; //customer name
+                    var pAge = dataSplited4[0]; //customer age
+                    var pGender = dataSplited[4]; //customer gender
+                    var proceedAgeCondition = false;
 
-                    if ((pId != 100 && profileId != 100) || (pId != 101 && profileId != 101)) {
+                    if (pId != 100) {
                         // here is the logic for age and gender, and return pId 
-                        if (pAge >= 0 && pAge <= 18) {
-                            if (pGender == 'M') {
-                                pId = 1;
-                            } else {
-                                pId = 2;
-                            }
-                        } else if (pAge >= 19 && pAge <= 30) {
-                            if (pGender == 'M') {
-                                pId = 3;
-                            } else {
-                                pId = 4;
-                            }
-                        } else if (pAge >= 31 && pAge <= 60) {
-                            if (pGender == 'M') {
-                                pId = 5;
-                            } else {
-                                pId = 6;
-                            }
-                        } else if (pAge >= 61 && pAge <= 255) {
-                            if (pGender == 'M') {
-                                pId = 7;
-                            } else {
-                                pId = 8;
-                            }
-                        }
+                        proceedAgeCondition = true;
                     }
 
-
-                    spanWelcome.html('');
-                    sidebar.html('');
-
-
-                    greetingWord = '';
-                    greetingWord += '<h3>';
-                    // depend what condition
-                    if (pName) {
-                        greetingWord += 'Welcome, ' + pName + '!';
-                    } else {
-                        greetingWord += 'Welcome!';
-                    }
-                    // depend what condition
-
-                    greetingWord += '</h3>';
-
-                    if (width < 1366) {
-                        spanWelcome.append(greetingWord);
-                        $('.spanWelcome').show();
-                        $('.sidebar').hide();
-                    } else {
-                        sidebar.append(greetingWord);
-                        $('.sidebar').show();
-                        $('.spanWelcome').hide();
+                    if (proceedAgeCondition) {
+                        console.log(pAge, pGender);
+                        var steps = new Promise(
+                                function (resolve, reject) {
+                                    $.ajax({
+                                        url: "http://knexfmw1.knextech.net:8081/ords/harith/restservice/v1.1/promotion_products?age=" + pAge + "&gender=" + pGender,
+                                        type: "GET",
+                                        processData: false,
+                                        contentType: "application/json",
+                                        success: function (result) {
+                                            resolve(result);
+                                        },
+                                        error: function (jqXHR, textStatus, errorThrown) {
+                                            console.log(jqXHR, textStatus, errorThrown);
+                                        }
+                                    });
+                                });
+                        steps.then(function (message) {
+                            json = message;
+                            scrollerReset();
+                            launchIsometric(json, 2); //2 is mean second time load isometric
+                        });
                     }
 
-                    if (pId == 100 && profileId == 100) { //sunny day                                                      
+                    greetingMessage(pName);
+
+                    if (pId == 100) { //sunny day                                                      
                         playMovie(pId);
                         $('#isometric').hide();
                         $('#modal').show();
                         //playMovie();
-                    } else if (pId == 101 && profileId == 101) { //rainy day                              
+                    } else if (pId == 101) { //rainy day                              
                         playMovie(pId);
                         $('#isometric').hide();
                         $('#modal').show();
@@ -1259,49 +304,24 @@ c)
                     // if mesage is personalID
                     // if message is 
 
-                    if (pId == 1) {
-                        json = p1;
-                    } else if (pId == 2) {
-                        json = p2;
-                    } else if (pId == 3) {
-                        json = p3;
-                    } else if (pId == 4) {
-                        json = p4;
-                    } else if (pId == 5) {
-                        json = w1;
-                    } else if (pId == 6) {
-                        json = w2;
-                    } else if (pId == 7) {
-                        json = w3;
-                    } else if (pId == 8) {
-                        json = w4;
-                    } else {
-                        json = p1;
-                    }
-                    ;
 
+                };
+
+                function scrollerReset() {
                     var scroller = $('.pseudo-scroller');//make page longer                                                                                          
                     scroller.hide('slow', function () {
                         scroller.remove();
                     });
+                }
 
-
+                function launchIsometric(json, version) {
+                   
                     var ul = $('.grid--effect-flip');
 
                     //stop it dont make it longer
                     ul.children().remove();
 
                     var liCollection = '';
-
-
-                    var dateFrom = Date.parse(json.promotion.effective_date);
-                    var dateTo = Date.parse(json.promotion.exppire_date);
-                    var today = new Date(); //today
-                    var isValidDate = "false";
-
-                    if (today.getTime() >= dateFrom && today.getTime() <= dateTo) {
-                        isValidDate = "true";
-                    }
 
 //                    var d1 = dateFrom.split("/");
 //                    var d2 = dateTo.split("/");
@@ -1314,25 +334,39 @@ c)
 //                    console.log(check > from && check < to)
 
 
-                    $.each(json.item_list, function (i, item) {
+                    $.each(json.items, function (i, item) {
+
+                        var dateFrom = Date.parse(item.effective_date);
+                        var dateTo = Date.parse(item.expire_date);
+                        var today = new Date(); //today
+                        var isValidDate = "false";
+
+                        if (today.getTime() >= dateFrom && today.getTime() <= dateTo) {
+                            isValidDate = "true";
+                        }
 
                         liCollection += '<li class="grid__item">';
-                        liCollection += '<a class="grid__link"' + ' id="' + item.product.id + '">';
-                        liCollection += '<img class="grid__img layer" src="' + item.product.sideImage2 + '" />';
-                        liCollection += '<img class="grid__img layer" src="' + item.product.sideImage1 + '" />';
-                        liCollection += '<img class="grid__img layer" id="main" src="' + item.product.mainImage + '" />';
-                        liCollection += '<span class="grid__title">' + item.product.name + '</span>';
-                        liCollection += '<p class="grid__itemname" style="display: none;">' + item.product.description + '</p>';//4
-                        liCollection += '<p class="grid__oriprice" style="display: none;">RM ' + item.product.selling_price + '</p>';//5
+                        liCollection += '<a class="grid__link"' + ' id="' + item.id + '">';
+                        liCollection += '<img class="grid__img layer" src="' + item.side_image2 + '" />';
+                        liCollection += '<img class="grid__img layer" src="' + item.side_image1 + '" />';
+                        liCollection += '<img class="grid__img layer" id="main" src="' + item.main_image + '" />';
+                        liCollection += '<span class="grid__title">' + item.name + '</span>';
+                        liCollection += '<p class="grid__itemname" style="display: none;">' + item.description + '</p>';//4
+                        liCollection += '<p class="grid__oriprice" style="display: none;">RM ' + item.selling_price + '</p>';//5
                         liCollection += '<p class="grid__promoprice" style="display: none;">RM ' + item.promotion_price + '</p>';//6
-                        liCollection += '<p class="grid__location" style="display: none;">' + item.product.location + '</p>';//7
-                        liCollection += '<p class="grid__product_code" style="display: none;">' + item.product.product_code + '</p>';//8
-                        liCollection += '<p class="grid__sku" style="display: none;">' + item.product.sku + '</p>';//9
+                        liCollection += '<p class="grid__location" style="display: none;">' + item.location + '</p>';//7
+                        liCollection += '<p class="grid__product_code" style="display: none;">' + item.product_code + '</p>';//8
+                        liCollection += '<p class="grid__sku" style="display: none;">' + item.sku + '</p>';//9
                         liCollection += '<p class="grid__promotion_flag" style="display: none;">' + isValidDate + '</p>';//10
-                        // liCollection += '<p class="grid__colour" style="display: none;">'+ item.colour +'</p></li>';        
+                        // liCollection += '<p class="grid__colour" style="display: none;">'+ item.colour +'</p></li>';      
                     });
 
-                    ul.append(liCollection).hide().show('slow');
+                    if (version == 2) {
+                        ul.append(liCollection).hide().show('slow');
+                    } else {
+                        ul.append(liCollection);
+                    }
+
 
 
 
@@ -1390,9 +424,10 @@ c)
                         // get ID for read the series ID and image for 3D
 
                         path = 'img/360/' + frontFileName + '/' + frontFileName + '{index}.jpg';
-                        count = 16; //limit set of transition images per subject
+                        count = 15; //limit set of transition images per subject
 
                         // refresh 360 degree image
+
                         var q = $threeSixty.reload(path, count);
 
 
@@ -1401,6 +436,8 @@ c)
                         //itemDetails.html('');
 
                         itemWord += '<h1>' + description + '</h1>';
+                        itemWord += '<h2>Code: ' + product_code + '</h2>';
+                        itemWord += '<h2>Sku: ' + sku + '</h2>';
                         if (validDate == "true") {
                             itemWord += '<h2>Promotion Price: ' + promotion_price + '</h2>';
                         }
@@ -1424,11 +461,35 @@ c)
 
                         //ajax call here
                     });
+                }
 
-                };
+                function greetingMessage(pName) {
+                    spanWelcome.html('');
+                    sidebar.html('');
 
 
+                    greetingWord = '';
+                    greetingWord += '<h3>';
+                    // depend what condition
+                    if (pName) {
+                        greetingWord += 'Welcome, ' + pName + '!';
+                    } else {
+                        greetingWord += 'Welcome!';
+                    }
+                    // depend what condition
 
+                    greetingWord += '</h3>';
+
+                    if (width < 1366) {
+                        spanWelcome.append(greetingWord);
+                        $('.spanWelcome').show();
+                        $('.sidebar').hide();
+                    } else {
+                        sidebar.append(greetingWord);
+                        $('.sidebar').show();
+                        $('.spanWelcome').hide();
+                    }
+                }
 
 
                 var options = {
@@ -1508,18 +569,18 @@ c)
                     var myvid = document.getElementById('myvideo');
                     var myvids;
 
-
                     if (pId == 100) {
                         myvids = [
-                            "https://dl.dropboxusercontent.com/s/ogxklvyr0uizxa2/Ice-Cream%20-%20Magnum.mp4?dl=0"
+                            "https://dl.dropboxusercontent.com/s/0y7es9t2yvv9vqm/Ice-Cream%20-%20Magnum.mp4?dl=0",
+                            "https://dl.dropboxusercontent.com/s/6v7bkvfyg7ea9gs/Coke.mp4?dl=0"
                         ];
-                        myvid.src = "https://dl.dropboxusercontent.com/s/ogxklvyr0uizxa2/Ice-Cream%20-%20Magnum.mp4?dl=0";
+                        myvid.src = "https://dl.dropboxusercontent.com/s/0y7es9t2yvv9vqm/Ice-Cream%20-%20Magnum.mp4?dl=0";
                     } else if (pId == 101) {
                         myvids = [
-                            "https://dl.dropboxusercontent.com/s/i5mw047oi9npnex/Umbrella%20Commercial.mp4?dl=0",
-                            "https://dl.dropboxusercontent.com/s/2yewgre17voaqb4/Hot%20coffee.mp4?dl=0"
+                            "https://dl.dropboxusercontent.com/s/73uwwb37l8a4wfj/Umbrella%20TVC.mp4?dl=0",
+                            "https://dl.dropboxusercontent.com/s/gz0jzi3q3rws1zb/Hot%20coffee.mp4?dl=0"
                         ];
-                        myvid.src = "https://dl.dropboxusercontent.com/s/i5mw047oi9npnex/Umbrella%20Commercial.mp4?dl=0";
+                        myvid.src = "https://dl.dropboxusercontent.com/s/73uwwb37l8a4wfj/Umbrella%20TVC.mp4?dl=0";
                     }
 
                     myvid.play();
@@ -1629,189 +690,60 @@ c)
                 var profileId = getParameterByName('profileId');
                 //var profileId = 2;                                  
 
-                var sidebar = $('.sidebar');
-                var spanWelcome = $('.spanWelcome');
-                var greetingWord = '';
 
-                sidebar.append('');
-
+                spanWelcome.html('');
+                sidebar.html('');
+                //localStorage.removeItem("ISO_INFO");
                 var infoObj = JSON.parse(localStorage.getItem("ISO_INFO"));
                 var customerName;
                 var customerAge;
                 var customerGender;
+                var url;
 
                 if (infoObj) {
                     var customerName = infoObj.name;
                     var customerAge = infoObj.age;
                     var customerGender = infoObj.gender;
+                    url = "http://knexfmw1.knextech.net:8081/ords/harith/restservice/v1.1/promotion_products?age=" + customerAge + "&gender=" + customerGender;
+                }else{
+                    url = "http://knexfmw1.knextech.net:8081/ords/harith/restservice/v1.1/promotion_products?pid=6";
                 }
 
-                var width = screen.width;
-                ;
-                console.log(width);
-
+                console.log("url");
+                console.log(url);
+                
                 $(window).bind('orientationchange', function (event) {
                     width = screen.width;
                 });
 
 
-                greetingWord += '<h3>';
-                // depend what condition
-                if (customerName) {
-                    greetingWord += 'Welcome, ' + customerName + '!';
-                } else {
-                    greetingWord += 'Welcome!';
-                }
-                // depend what condition
-
-                greetingWord += '</h3>';
-                //greetingWord += '<p>';
-
-                // depend what condition
-                //greetingWord += 'Hi, ';
-
-
-                var customer = {};
-
-                if (profileId == 1) {
-                    customer = {
-                        "customerName": 'Mr Walker'
-                    }
-                } else if (profileId == 2) {
-                    customer = {
-                        "customerName": 'Mr Alan'
-                    }
-                } else if (profileId == 3) {
-                    customer = {
-                        "customerName": 'Ms Avril'
-                    }
-                } else if (profileId == 4) {
-                    customer = {
-                        "customerName": 'Mrs Taylor'
-                    }
-                } else if (profileId == 5) {
-                    customer = {
-                        "customerName": 'Datuk Puah'
-                    }
-                } else {
-                    customer = {
-                        "customerName": 'Lovely'
-                    }
-                }
-
-                //greetingWord += customer.customerName;
-
-
-                //greetingWord += '. This is for you';
-                // depend what condition
-
-                //greetingWord += '</p>';
-                console.log(width);
-
-                if (width < 1366) {
-                    console.log("width Fulfilled");
-                    spanWelcome.append(greetingWord);
-                    console.log(spanWelcome);
-                    $('.spanWelcome').show();
-                    $('.sidebar').hide();
-                } else {
-                    console.log("width NOT Fulfilled");
-                    sidebar.append(greetingWord);
-                    $('.sidebar').show();
-                    $('.spanWelcome').hide();
-                }
-
-
-
+                greetingMessage(customerName);
 
                 //check what is the data get from Shield
 
-                if (pId == 1) {
-                    json = p1;
-                } else if (pId == 2) {
-                    json = p2;
-                } else if (pId == 3) {
-                    json = p3;
-                } else if (pId == 4) {
-                    json = p4;
-                } else if (pId == 5) {
-                    json = w1;
-                } else if (pId == 6) {
-                    json = w2;
-                } else if (pId == 7) {
-                    json = w3;
-                } else if (pId == 8) {
-                    json = w4;
-                } else {
-                    json = p1;
-                }
-                ;
-
-
-                var ul = $('.grid--effect-flip');
-                var liCollection = '';
-
-                var dateFrom = Date.parse(json.promotion.effective_date);
-                var dateTo = Date.parse(json.promotion.exppire_date);
-                var today = new Date(); //today
-                var isValidDate = "false";
-
-
-
-                if (today.getTime() >= dateFrom && today.getTime() <= dateTo) {
-                    isValidDate = "true";
-                }
-
-
-                $.each(json.item_list, function (i, item) {
-
-                    liCollection += '<li class="grid__item">';
-                    liCollection += '<a class="grid__link"' + ' id="' + item.product.id + '">';
-                    liCollection += '<img class="grid__img layer" src="' + item.product.sideImage2 + '" />';
-                    liCollection += '<img class="grid__img layer" src="' + item.product.sideImage1 + '" />';
-                    liCollection += '<img class="grid__img layer" id="main" src="' + item.product.mainImage + '" />';
-                    liCollection += '<span class="grid__title">' + item.product.name + '</span>';
-                    liCollection += '<p class="grid__itemname" style="display: none;">' + item.product.description + '</p>';
-                    liCollection += '<p class="grid__oriprice" style="display: none;">' + item.product.selling_price + '</p>';
-                    liCollection += '<p class="grid__promoprice" style="display: none;">' + item.promotion_price + '</p>';
-                    liCollection += '<p class="grid__location" style="display: none;">' + item.product.location + '</p>';
-                    liCollection += '<p class="grid__product_code" style="display: none;">' + item.product.product_code + '</p>';//8
-                    liCollection += '<p class="grid__sku" style="display: none;">' + item.product.sku + '</p>';//9
-                    liCollection += '<p class="grid__promotion_flag" style="display: none;">' + isValidDate + '</p>';//10
-                    // liCollection += '<p class="grid__colour" style="display: none;">'+ item.colour +'</p></li>';        
+                var steps = new Promise(
+                        function (resolve, reject) {
+                            $.ajax({
+                                url: url,
+                                type: "GET",
+                                processData: false,
+                                contentType: "application/json",
+                                success: function (result) {
+                                    resolve(result);
+                                },
+                                error: function (jqXHR, textStatus, errorThrown) {
+                                    console.log(jqXHR, textStatus, errorThrown);
+                                }
+                            });
+                        });
+                steps.then(function (message) {
+                    json = message;
+                    launchIsometric(json, 1); //1 is mean second time load isometric
                 });
 
-                ul.append(liCollection);
 
-                isobind();
-                //put the isometric form into function for isometric binding in videoPlay function
-                function isobind() {
-                    [].slice.call(document.querySelectorAll('.isolayer')).forEach(function (el) {
-                        new IsoGrid(el, {
-                            type: 'scrollable',
-                            transform: 'translateX(-15vw) translateY(275px) rotateX(45deg) rotateZ(45deg)',
-                            stackItemsAnimation: {
-                                properties: function (pos) {
-                                    return {
-                                        translateZ: (pos + 1) * 50,
-                                        rotateZ: getRandomInt(-3, 3)
-                                    };
-                                },
-                                options: function (pos, itemstotal) {
-                                    return {
-                                        type: dynamics.bezier,
-                                        duration: 500,
-                                        points: [{"x": 0, "y": 0, "cp": [{"x": 0.2, "y": 1}]}, {"x": 1, "y": 1, "cp": [{"x": 0.3, "y": 1}]}],
-                                        //delay: (itemstotal-pos-1)*40
-                                    };
-                                }
-                            },
-                            onGridLoaded: function () {
-                                classie.add(document.body, 'grid-loaded');
-                            }
-                        });
-                    });
-                }
+
+
 
 
 //			$('#weatherslider').weatherSlider({
@@ -1862,76 +794,12 @@ c)
                 });
 
 
-                var $threeSixty = $('.threesixty');
-
-                $(".grid__link").click(function (data) {
-                    //get ID
-
-                    var filePath = $(this).context.childNodes[2].src; //eg: file:///Users/user/MyWork/iSolutionProjects/IsometricGrids/img/p2/p21.jpg
-                    var n = filePath.lastIndexOf('/'); // get last slash number                                
-                    var fileName = filePath.substring(n + 1); //get the last slash file name                                
-                    var dotIndex = fileName.lastIndexOf('.'); //get fileName without extension number
-                    var frontFileName = fileName.slice(0, dotIndex); //get fileName without extension                                                                 
-
-                    //Get From JSON harcode
-                    console.log("data.currentTarget.childNodes");
-                    console.log(data.currentTarget.childNodes);
-                    var description = data.currentTarget.childNodes[4].innerHTML; //description 
-                    var promotion_price = data.currentTarget.childNodes[6].innerHTML;
-                    var selling_price = data.currentTarget.childNodes[5].innerHTML;
-                    var location = data.currentTarget.childNodes[7].innerHTML;
-                    var product_code = data.currentTarget.childNodes[8].innerHTML;
-                    var sku = data.currentTarget.childNodes[9].innerHTML;
-                    var validDate = data.currentTarget.childNodes[10].innerHTML;
-                    // var colour = data.currentTarget.childNodes[8].innerHTML;
-
-                    var path;
-                    var count;
-                    // get ID for read the series ID and image for 3D
-
-                    path = 'img/360/' + frontFileName + '/' + frontFileName + '{index}.jpg';
-                    count = 16; //limit set of transition images per subject
-
-                    // refresh 360 degree image
-                    var q = $threeSixty.reload(path, count);
-
-
-                    var itemWord = '';
-                    var itemDetails = $('#item-details');
-                    //itemDetails.html('');
-
-                    itemWord += '<h1>' + description + '</h1>';
-                    if (validDate == "true") {
-                        itemWord += '<h2>Promotion Price: ' + promotion_price + '</h2>';
-                    }
-                    itemWord += '<h2>Original Price: ' + selling_price + '</h2>';
-                    itemWord += '<h2>Location: ' + location + '</h2>';
-                    // itemWord += '<h2>Colour: '+ colour +'</h2>';
-                    itemWord += '<div id="closeModal" class="button">OK</div>';
-
-                    itemDetails.empty().prepend(itemWord);
-
-
-                    //apend button will no function, so need define again .click for it
-                    $('#closeModal').click(function () {
-                        $('#modal-container').addClass('out');
-                        $('body').removeClass('modal-active');
-                    })
-
-
-                    $('#modal-container').removeAttr('class').addClass('one');
-                    $('body').addClass('modal-active');
-
-                    //ajax call here
-                });
-
 
                 $('#closeModal').on('click', function () {
                     $('#modal-container').addClass('out');
                     $('body').removeClass('modal-active');
                 });
 
-                var $threeSixty = $('.threesixty');
 
                 $threeSixty.threeSixty({
                     dragDirection: 'horizontal',
